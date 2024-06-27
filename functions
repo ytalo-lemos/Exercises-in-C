@@ -1,0 +1,891 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+
+// switch - case // menu
+int main()
+{
+int v;
+    printf("Insira um calor de 1 a 7: \n");
+    scanf("%d",&v);
+    switch(v){
+        case 1:
+            printf("Case_1");
+            break;
+        case 2:
+            printf("Case_2");
+            break;
+        case 3:
+            printf("Case_3");
+            break;
+        case 4:
+            printf("Case_4");
+            break;
+        case 5:
+            printf("Case_5");
+            break;
+        case 6:
+            printf("Case_6");
+            break;
+        case 7:
+            printf("Case_7");
+            break;
+        default:
+            printf("Valor invalido!");
+            break;
+        }
+    return 0;
+}
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    int a,b,c;
+    printf("\n\n\tDigite valor 'A' e valor 'B': ");
+    scanf("%d%d",&a,&b);
+    c = a * b;
+    printf("\n\tValor da multiplicação: %d\n",c);
+    return 0;
+}
+int main()
+{
+    //q2
+    setlocale(LC_ALL,"Portuguese");
+    int a;
+    printf("Digite um numero: ");
+    scanf("%d",&a);
+    printf("Seu sucessor: %d",++a);
+    printf("\nSeu antecessor: %d",--a);
+    return 0;
+}
+int main()
+{
+    //q3
+    setlocale(LC_ALL,"Portuguese");
+    int x,y,resto;
+    printf("Digite os valores de X e de Y: ");
+    scanf("%d%d",&x,&y);
+    resto = x % y;
+    printf("\nO resto da divisão entre X e Y é: %d\n",resto);
+    return 0;
+}
+int main()
+{
+    //q4
+    setlocale(LC_ALL,"Portuguese");
+    int a,b,s,p,q;
+    printf("\n\n\tDigite valor 'A' e valor 'B': ");
+    scanf("%d%d",&a,&b);
+    s = a + b;
+    p = a * b;
+    q = a / b;
+    printf("\n\tValor da soma: %d\n",s);
+    printf("\n\tValor da multiplicação: %d\n",p);
+    printf("\n\tValor da divisão: %d\n",q);
+    return 0;
+}
+int main()
+{
+    //q5
+    setlocale(LC_ALL,"Portuguese");
+    float c,p;
+    printf("\nDigite os centímetros: ");
+    scanf("%f",&c);
+    p = c / 2.54;
+    printf("\nValor em polegadas: %.2f\n",p);
+    return 0;
+}
+int main()
+{
+    //q6
+    setlocale(LC_ALL,"Portuguese");
+    float pi,a,r;
+    printf("Digite o raio: ");
+    scanf("%f",&r);
+    pi = 3.14;
+    a = pi * r * r;
+    printf("A área do círculo é: %.2f",a);
+    return 0;
+}
+int main()
+{
+    //q7
+    setlocale(LC_ALL,"Portuguese");
+    float a,v,pi,r,h,hr;
+    pi = 3.14;
+    printf("Digite o raio e a altura: ");
+    scanf("%f%f",&r,&h);
+    hr = h + r;
+    v = pi * r*r * h;
+    a = 2 * pi * r * hr;
+
+    printf("A área do cilindro correspode a: %.2f\n",a);
+    printf("O volume do cilindro correspode a: %.2f",v);
+    return 0;
+}
+int main()
+{
+    //q8
+    setlocale(LC_ALL,"Portuguese");
+    float salf,vd,fim;
+    printf("Digite o salário fixo e o total de vendas: ");
+    scanf("%f%f",&salf,&vd);
+    fim = salf + vd*15/100;
+    printf("O salário no final do mês: R$%.2f",fim);
+    return 0;
+}
+in main()
+{
+    //q9
+    int a,b,c;
+    printf("Digite dois valores inteiro: ");
+    scanf("%d%d",&a,&b);
+    printf("\nValores lidos: a: %d b: %d\n",a,b);
+    c = a;
+    a = b;
+    b = c;
+    printf("\nValores lidos: a: %d b: %d\n",a,b);
+    return 0;
+}
+int main()
+{
+    //q11
+    setlocale(LC_ALL,"Portuguese");
+    float valorc,valorp,troco;
+    printf("\n\tDigite o valor da compra: ");
+    scanf("%f",&valorc);
+    printf("\n\tDigite o valor pago: ");
+    scanf("%f",&valorp);
+    troco = valorp - valorc;
+    if (valorp < valorc)
+        printf("\n\tFalta de pagamento!\n");
+    else{
+        if (valorp == valorc)
+            printf("\n\tNao tem troco! \n");
+        else
+            printf("\n\tTroco: %.2f\n",troco);
+    }
+    return 0;
+}
+int main()
+{
+    //q12
+    int a,b,c,d,e,f,media1,media2,media3;
+    a=7;
+    b=8;
+    c=9;
+    d=4;
+    e=5;
+    f=6;
+    media1 = a+b+c;
+    media1 = media1/3;
+    media2 = d+e+f;
+    media2 = media2/3;
+    media3 = media1+media2;
+    printf("\n\tSoma das duas medias %d\n",media3);
+    media3 = media3/2;
+    printf("\n\tMedia das duas medias %d\n",media3);
+    return 0;
+}
+int main()
+{
+    //q13
+    float fab,fin,imp,rev;
+    setlocale(LC_ALL,"Portuguese");
+    printf("\n\tInsira o valor de fabrica: ");
+    scanf("%f",&fab);
+    imp = fab * 45/100;
+    rev = fab * 28/100;
+    fin = fab + imp + rev;
+    printf("\n\tO valor revendedor: R$%2.f\n",rev);
+    printf("\n\tO valor imposto: R$%2.f\n",imp);
+    printf("\n\tO preco final: R$%2.f\n",fin);
+    return 0;
+}
+int main()
+{
+    //q14
+    int a;
+    printf("Insira um numero inteiro: ");
+    scanf("%d",&a);
+    (a>0)? printf("Valor positivo!") :
+        (a == 0) ? printf("Valor igual a zero!") : printf("Valor negativo!");
+    return 0;
+}
+int main()
+{
+    //q15
+    int a;
+    printf("Insira um numero inteiro: ");
+    scanf("%d",&a);
+    if (a % 2 == 0)
+        printf("Nuemro par");
+    else
+        printf("Valor impar");
+    return 0;
+}
+int main()
+{
+    //q16
+    int a;
+    printf("Insira um numero inteiro: ");
+    scanf("%d",&a);
+    (a>0)? printf("Valor positivo! %d",a) :
+        (a == 0) ? printf("Valor igual a zero!") : printf("Valor negativo! %d",-1*a);
+    return 0;
+}
+int main()
+{
+    //q17
+    int a,b;
+    printf("Insira dois numeros inteiros: ");
+    scanf("%d%d",&a,&b);
+    (a>b)? printf("Valor de a maior que b! %d",a) :
+        (a == b) ? printf("a igual b! %d",a) : printf("b maior que a! %d",b);
+    return 0;
+}
+int main()
+{
+    //q18
+    int q;
+    printf("Digite a quantidade de macas: ");
+    scanf("%d",&q);
+    (q>=12) ? printf("Preco das macas R$0,25 total a pagar: %.2f",0.25*q) : printf("Preco das macas R$0,25 total a pagar: %.2f",0.30*q);
+    return 0;
+}
+int main()
+{
+    //q19
+    int a,b,c;
+    printf("Digite tres valores inteiros: ");
+    scanf("%d%d%d",&a,&b,&c);
+    (a>b && a>c)? printf("a e o maior valor: %d",a) :
+        (b>c && b>a) ? printf("b maior valor: %d",b) : printf("c maior valor: %d",c);
+    return 0;
+}
+int main()
+{
+    //q20
+    int a,b,c,t=0;
+    printf("Digite tres valores: ");
+    scanf("%d%d%d",&a,&b,&c);
+    if (a>b){
+        t=a;
+        a=b;
+        b=t;
+        t=0;
+    }
+    if (a>c){
+        t=a;
+        a=c;
+        c=t;
+        t=0;
+    }
+    if (b>c){
+        t=b;
+        b=c;
+        c=t;
+    }
+    printf("Valores em ordem crescente: %d %d %d\n",a,b,c);
+    return 0;
+}
+int main()
+{
+    //q21
+    int a,b,c,ab,ac,bc;
+    printf("Digite o valor de a b e c: ");
+    scanf("%d%d%d",&a,&b,&c);
+    ab=a+b;
+    ac=a+c;
+    bc=b+c;
+    (ab<c || ac<b || bc<a) ? printf("Nao e um triangulo"):
+        (a!=b || a!=c || c!=b) ? printf("Escaleno"):
+            (a==b && b==c && a==c)? printf("Equilatero!"): printf("Isoscele");
+    return 0;
+}
+int main()
+{
+    //q22
+    int a,b,sm,sb,mp,dv,v,r;
+    printf("\n\tDigite dois valores: ");
+    scanf("%d%d",&a,&b);
+    printf("\n\t1_adicao\n\n\t2_subtracao\n\n\t3_multiplicacao\n\n\t4_divisao\n\n\t");
+    scanf("%d",&v);
+    switch(v){
+        case 1:
+            sm=a+b;
+            printf("\n\t%d\n",sm);
+            break;
+        case 2:
+            sb=a-b;
+            printf("\n\t%d\n",sb);
+            break;
+        case 3:
+            mp=a*b;
+            printf("\n\t%d\n",mp);
+            break;
+        case 4:
+            dv=a/b;
+            r=a%b;
+            printf("\n\t%d Resto: %d\n",dv,r);
+            break;
+        default:
+            printf("\n\tValor invalido!");
+            break;
+        }
+    return 0;
+}
+int main()
+{
+    //23
+    float a,b,c,d,r1,r2;
+    printf("Digite os valores de a b e c da sua funcao: ");
+    scanf("%f%f%f",&a,&b,&c);
+    d = (b*b)-4*a*c;
+    d = sqrt(d);
+    (d>0) ? printf("ha duas solucoes reais e diferentes!\n") :
+        (d<0) ? printf("nao ha solucao real!\n") : printf("ha duas solucoes reais e diferentes!\n");
+    r1 = (-b+d);
+    r1=r1/2*a;
+    r2 = (-b-d);
+    r2=r2/2*a;
+
+    printf("%.2f\n%.2f",r1,r2);
+    return 0;
+}
+int main()
+{
+    //q24
+    float vf,c,icms,vp;
+    int v;
+    printf("Digite o consumo em KW/h: ");
+    scanf("%f",&c),
+    printf("\n\t1_classe_a\n\n\t2_classe_b\n\n\t3_classe_c\n\n\t");
+    scanf("%d",&v);
+    switch(v){
+        case 1:
+            vf = c * 0.50;
+            icms=vf*0.3;
+            vp=vf+icms;
+            printf("\n\tValor a pagar: R$%.2f\n",vp);
+            break;
+        case 2:
+            vf = c * 0.80;
+            icms=vf*0.3;
+            vp=vf+icms;
+            printf("\n\tValor a pagar: R$%.2f\n",vp);
+            break;
+        case 3:
+            vf = c * 1.00;
+            icms=vf*0.3;
+            vp=vf+icms;
+            printf("\n\tValor a pagar: R$%.2f\n",vp);
+            break;
+        default:
+            printf("\n\tValor invalido!");
+            break;
+        }
+
+    return 0;
+}
+int main()
+{
+    //q25
+    int a=14,i;
+    for (i=14;i<=30;i++){
+        (a%2==0) ? printf("%d ",a) : printf(" ");
+        a=a+1;
+    }
+    return 0;
+}
+int main()
+{
+    //q26
+    int a;
+    for (a=0;a<=70;a++){
+        (a%7==0) ? printf("%d ",a): printf("");
+    }
+    return 0;
+}
+int main()
+{
+    //q27
+    int a,temp;
+    for (a=15;a<=30;a++){
+        temp = a;
+        a = a*a;
+        printf("%d ",a);
+        a = a/temp;
+    }
+    return 0;
+}
+int main()
+{
+    //q28
+    int s=0;
+    for (int a=1;a<=101;a++){
+        printf("%d ",s);
+        s += a;
+    }
+    return 0;
+}
+int main()
+{
+    //q29
+    int a,b,c,d,e;
+    printf("Digite 5 numeros: ");
+    scanf("%d%d%d%d%d",&a,&b,&c,&d,&e);
+    if (a>=100 && a<=200){
+        printf("Voce digitou um numero entre 100 e 200 \n");
+        printf("Numero valido %d\n",a);
+    }
+    if (b>=100 && b<=200){
+        printf("Voce digitou um numero entre 100 e 200 \n");
+        printf("Numero valido %d\n",b);
+    }
+    if (c>=100 && c<=200){
+        printf("Voce digitou um numero entre 100 e 200 \n");
+        printf("Numero valido %d\n",c);
+    }
+    if (d>=100 && d<=200){
+        printf("Voce digitou um numero entre 100 e 200 \n");
+        printf("Numero valido %d\n",d);
+    }
+    if (e>=100 && e<=200){
+        printf("Voce digitou um numero entre 100 e 200 \n");
+        printf("Numero valido %d\n",e);
+    }
+    return 0;
+}
+int main()
+{
+    //q30
+    int idade, maiores = 0;
+
+    for (int i = 0; i < 10; i++) {
+        printf("Digite a idade da pessoa %d: ", i + 1);
+        scanf("%d", &idade);
+
+        if (idade >= 18) {
+            maiores++;
+        }
+    }
+
+    printf("Quantidade de pessoas maiores de idade: %d\n", maiores);
+    return 0;
+}
+int main()
+{
+    //q31
+    int v;
+    float f,c;
+    printf("\t1_conversao\n\t2_tabela\n\t");
+    scanf("%d",&v);
+    switch(v){
+        case 1:
+            printf("Digite os graus Fahrenheit: ");
+            scanf("%f",&f);
+            c = (f-32)*5/9;
+            printf("valor em celsius: %.2f",c);
+            c = 0;
+            f = 0;
+            break;
+        case 2:
+            c=50;
+            for( int i=0;i<16;i++){
+                f = (c+32)*9/5;
+                printf("\n%.2f\n",c);
+                printf("%.2f\n",f);
+                c++;
+            }
+            break;
+        default:
+            printf("Valor invalido!");
+            break;
+        }
+    return 0;
+}
+int main()
+{
+    //q32
+    int numero,maior=-999999999;
+
+    for (int i = 0; i < 20; i++) {
+        printf("Digite o %d numero inteiro: ",i + 1);
+        scanf("%d",&numero);
+
+        if (numero > maior) {
+            maior=numero;
+        }
+    }
+    printf("O maior valor fornecido foi: %d\n", maior);
+    return 0;
+}
+int main()
+{
+    //q33
+    int p,m=0,c=0,n=13;
+    for(int i=0;i<61;i++){
+        if (n%2==0){
+            printf("%d ",n);
+            m+=n;
+            c++;
+        }
+        n++;
+    }
+    m=m/c;
+    printf("\nmedia: %d\n",m);
+    return 0;
+}
+int main() {
+    //q34
+    int n, c1 = 0, c2 = 0;
+    for (int i = 0; i < 10; i++) {
+        printf("Digite o %d numero inteiro: ", i + 1);
+        scanf("%d", &n);
+
+        if (n > 10 && n < 50) {
+            c1++;
+        } else {
+            c2++;
+        }
+    }
+    printf("Numeros dentro do limite: %d\n", c1);
+    printf("Numeros fora do limite: %d\n", c2);
+    return 0;
+}
+int main() {
+    //q35
+    int h=0,n=0;
+    printf("Digite n: ");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        h += i;
+    }
+    printf("%d",h);
+    return 0;
+}
+int main() {
+    //q36
+    int n;
+    float s=0.0;
+    printf("Digite n: ");
+    scanf("%d",&n);
+    for(int i=1;i<n;i++){
+        s+=1.0/i;
+    }
+    printf("%.2f",s);
+    return 0;
+}
+int main() {
+    //q37
+    int n,c;
+    float s=1;
+    c = 3;
+    printf("Digite n: ");
+    scanf("%d",&n);
+    for(int i=1;i<n;i++){
+        s+=c/i++;
+        c++;
+        c++;
+    }
+    printf("%.2f",s);
+    return 0;
+}
+int main() {
+    //q38
+    float x,s,c;
+    printf("Insira o valor x: ");
+    scanf("%f",&x);
+    for (int i=1;i<20;i++){
+        s+=1/x-c;
+        c++;
+        printf(" %.2f ",s);
+    }
+    return 0;
+}
+int main() {
+    //q39
+    int n = 10;
+    int a = 0, b = 1, next;
+    printf("Numero de termos: ");
+    scanf("%d",&n);
+
+    printf("Os termos da sequencia de Fibonacci sao:\n");
+
+    for (int i = 1; i <= n; i++) {
+        if (i == 1) {
+            printf("%d ", a);
+            continue;
+        }
+        if (i == 2) {
+            printf("%d ", b);
+            continue;
+        }
+        next = a + b;
+        a = b;
+        b = next;
+        printf("%d ", next);
+    }
+    return 0;
+}
+int main() {
+    //q40
+    int k,r,n;
+    printf("Digite o valor de K e de N ");
+    scanf("%d%d",&k,&n);
+    r = pow(k,n);
+    printf("%d",r);
+    return 0;
+}
+//q41
+    int k,r,n=1,c;
+    printf("Digite o valor de K e Sua potencia: ");
+    scanf("%d%d",&k,&c);
+    for (int i = 0;i < c;i++){
+        r = pow(k,n);
+        printf(" %d ",r);
+        n++;
+    }
+    return 0;
+}
+int z,x,n,a,s=0,c1=1,c2=1,c3=20,temp;
+    printf("valor de X, A e o numero de termos: ");
+    scanf("%d%d%d",&x,&a,&n);
+    temp = x;
+    for (int i=0;i<n;i++){
+        z = c1/a-c2;
+        s+=z*--c3/x;
+        c2++;
+        c1++;
+        x=temp;
+        x=pow(x,i);
+        printf("% d ",s);
+    }
+    return 0;
+}
+int main() {
+    //q43
+    float t,m=20.0;
+    printf("Digite a massa: ");
+    scanf("%f",&m);
+    for (int i=0;m>=0.5;i++){
+        m=m/2;
+        t=t+0.5;
+        printf(" Massa: %.2f\n ",m);
+    }
+    printf(" Tempo total: %.2fs ",t);
+    return 0;
+}
+int main() {
+    //q44
+    float s,c=1,v,f;
+    int n;
+    printf("Digite quantos numeros vai usar: ");
+    scanf("%d",&n);
+    for (int i=0;i<n;i++){
+        printf("Digite o %.0f numero: ",c);
+        scanf("%f",&v);
+        s+=v;
+        f+=v;
+        c++;
+    }
+    f=f/n;
+    printf("Soma: %.0f\n",s);
+    printf("Media: %.0f",f);
+    return 0;
+}
+int main() {
+    //q45
+    int n,c=1,temp;
+    printf("Insira o numero da tabuada: ");
+    scanf("%d",&n);
+    temp=n;
+    for (int i=0;i<=9;i++){
+        n=temp;
+        n=n*c;
+        c++;
+        printf("%d\n",n);
+    }
+    return 0;
+}
+int main() {
+    //q46
+    int n,temp,s=1;
+    printf("Insira um numero: ");
+    scanf("%d",&n);
+    if (n==0){
+        printf("Resultado: 1");
+    }else{
+        for (int i=1;i<=n;i++){
+        s*=i;
+    }
+        printf("Resultado: %d",s);
+    }
+    return 0;
+}
+int main() {
+    //q47
+    int v;
+    float h,pi;
+    printf("Digite sua altura: ");
+    scanf("%f",&h);
+    if (h <= 0) {
+        printf("Altura invalida\n");
+        return 0;
+    }
+    printf("\t1 - Sexo feminino\n");
+    printf("\t2 - Sexo masculino\n");
+    scanf("%d",&v);
+    switch(v){
+        case 1:
+            pi = 62.1 * h-44.7;
+            printf("Peso ideal: %.2f",pi);
+            break;
+        case 2:
+            pi = 72.7 *h-58;
+            printf("Peso ideal: %.2f",pi);
+            break;
+        default:
+            printf("Valor invalido!");
+            break;
+        }
+    return 0;
+}
+int main() {
+    //q48
+    int t = 0, v;
+    float PE = 0, temp;
+    for (int i = 1; ; i++) {
+        printf("Insira o Preco da Etiqueta (ou 0 para sair): ");
+        scanf("%f", &temp);
+        if (temp == 0) {
+            break;
+        }
+        PE += temp;
+    }
+    printf("\t1 - A vista em dinheiro ou cheque, com 10%% de desconto\n");
+    printf("\t2 - A vista com cartao de credito, com 5%% de desconto\n");
+    printf("\t3 - Em 2 vezes, preco normal de etiqueta sem juros\n");
+    printf("\t4 - Em 3 vezes, preco de etiqueta com acrescimo de 10%%\n");
+    scanf("%d", &v);
+    switch(v) {
+        case 1:
+            t = PE * 0.1;
+            PE = PE - t;
+            printf("Valor total a ser pago usando dinheiro ou cheque: %.2f\n", PE);
+            break;
+        case 2:
+            t = PE * 0.05;
+            PE = PE - t;
+            printf("Valor total a ser pago usando cartao de credito: %.2f\n", PE);
+            break;
+        case 3:
+            printf("Valor a ser pago em 2x sem juros: %.2f\n", PE / 2);
+            break;
+        case 4:
+            t = PE * 0.1;
+            PE = PE + t;
+            printf("Valor a ser pago em 3x com juros de 10%%: %.2f\n", PE / 3);
+            break;
+        default:
+            printf("Valor invalido!\n");
+            break;
+    }
+    return 0;
+}
+int main() {
+    //q49
+    int nh;
+    float salario, maiorSalario = 0, totalSalarios = 0, mediaSalario, mediaFilhos, percentualSalario1000;
+    int filhos, totalFilhos = 0, countSalario1000 = 0;
+    printf("Numero de habitantes: ");
+    scanf("%d", &nh);
+    for (int i = 1; i <= nh; i++) {
+        printf("Salario do habitante n%c%d: ",248,i);
+        scanf("%f", &salario);
+        printf("Numero de filhos do habitante n%c%d: ",248,i);
+        scanf("%d", &filhos);
+        totalSalarios += salario;
+        if (salario > maiorSalario) {
+            maiorSalario = salario;
+        }
+        totalFilhos += filhos;
+        if (salario > 1000) {
+            countSalario1000++;
+        }
+    }
+    mediaSalario = totalSalarios / nh;
+    mediaFilhos = (float)totalFilhos / nh;
+    percentualSalario1000 = (float)countSalario1000 / nh * 100;
+    printf("\nMedia do salario da populacao: %.2f", mediaSalario);
+    printf("\nMedia do numero de filhos: %.0f", mediaFilhos);
+    printf("\nMaior salario: %.2f", maiorSalario);
+    printf("\npessoas com salarios ate $1000: %.1f%%\n", percentualSalario1000);
+    return 0;
+}
+int main() {
+    //q50
+    int n = 15;
+    char sexo;
+    float altura, maiorAltura = 0, menorAltura = 999, totalAlturaMulheres = 0, mediaAlturaMulheres;
+    int numHomens = 0;
+    for (int i = 1; i <= n; i++) {
+        printf("Sexo da pessoa %d (M/F): ", i);
+        scanf(" %c", &sexo);
+        printf("Altura da pessoa %d: ", i);
+        scanf("%f", &altura);
+        if (altura > maiorAltura) {
+            maiorAltura = altura;
+        }
+        if (altura < menorAltura) {
+            menorAltura = altura;
+        }
+        if (sexo == 'F' || sexo == 'f') {
+            totalAlturaMulheres += altura;
+        }
+        if (sexo == 'M' || sexo == 'm') {
+            numHomens++;
+        }
+    }
+    mediaAlturaMulheres = totalAlturaMulheres / n;
+    printf("\nMaior altura do grupo: %.2f\n", maiorAltura);
+    printf("Menor altura do grupo: %.2f\n", menorAltura);
+    printf("Media de altura das mulheres: %.2f\n", mediaAlturaMulheres);
+    printf("Numero de homens: %d\n", numHomens);
+    return 0;
+}
+int main() {
+    //q51
+    char sexo, resposta;
+    int numSim = 0, numNao = 0, numMulheresSim = 0, numHomensNao = 0, n = 20;
+    for (int i = 1; i <= n; i++) {
+        printf("Sexo da pessoa %d (M/F): ", i);
+        scanf(" %c", &sexo);
+
+        printf("Resposta da pessoa %d (S/N): ", i);
+        scanf(" %c", &resposta);
+
+        if (resposta == 'S' || resposta == 's') {
+            numSim++;
+            if (sexo == 'F' || sexo == 'f') {
+                numMulheresSim++;
+            }
+        } else if (resposta == 'N' || resposta == 'n') {
+            numNao++;
+            if (sexo == 'M' || sexo == 'm') {
+                numHomensNao++;
+            }
+        }
+    }
+
+    float porcMulheresSim = (float)numMulheresSim / (n / 2) * 100;
+    float porcHomensNao = (float)numHomensNao / (n / 2) * 100;
+
+    printf("\nNumero de pessoas que responderam sim: %d\n", numSim);
+    printf("Numero de pessoas que responderam nao: %d\n", numNao);
+    printf("Porcentagem de mulheres que responderam sim: %.2f%%\n", porcMulheresSim);
+    printf("Porcentagem de homens que responderam nao: %.2f%%\n", porcHomensNao);
+    return 0;
+}
